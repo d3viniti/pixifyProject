@@ -1,0 +1,84 @@
+:root{
+    --background-color: #2A3B49;
+    --accent-teal: #7BFFE9;
+    --text-light: #FFFFFF;
+    --text-dark: #000000;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+body{
+    display: grid;
+    height: 100vh;
+    grid-template-areas: 
+    "nav"
+    "main";
+    grid-template-rows: 70px 1fr;
+    border: pink 2px solid;
+    
+}
+
+/* ----------------- HEADER ----------------------- */
+
+header{
+    grid-area: "nav";
+    height: 100%;
+}
+
+nav {
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+}
+
+.logo a{                    /* PIXIFY logo */
+  color: var(--accent-teal);
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 36px;
+}
+
+.nav-btns a{
+  color: var(--text-light);
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+/* ----------------- HEADER ----------------------- */
+
+main {
+    grid-area: "main";
+    position: relative;
+    background-image: url("/assets/homepage.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: teal 2px solid;
+    height: 100vh;
+}
+
+main p{
+  background-color: var(--background-color);
+  color: var(--text-light);
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 30px;
+  text-align: center;
+  padding: 15px 15px;
+  position: absolute;
+  width: 45%;
+  top: 85vh;
+  left: 0;
+  border-radius: 150px 150px 150px 0;
+
+}
