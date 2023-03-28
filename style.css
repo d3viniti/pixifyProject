@@ -16,13 +16,8 @@
   }
 
 body{
-    display: grid;
-    height: 100vh;
-    grid-template-areas: 
-    "nav"
-    "main";
-    grid-template-rows: 70px 1fr;
-    border: pink 2px solid;
+    display: flex;
+    flex-direction: column;
     
 }
 
@@ -37,14 +32,31 @@ nav {
     background-color: var(--background-color);
     display: flex;
     justify-content: space-between;
-    padding: 5px 0;
+    padding: 5px 5px;
+    margin: 0;
 }
 
-.logo a{                    /* PIXIFY logo */
+/* PIXIFY logo */
+
+.logo {
+  padding-left: 10px;
+}
+
+.logo a{                    
   color: var(--accent-teal);
   font-family: Montserrat;
   font-weight: 400;
   font-size: 36px;
+}
+
+/* --------------- NAV BTNS ------------ */
+
+.nav-btns {
+  width: 15%;
+display: flex;
+justify-content: space-around;
+align-items: center;
+padding-right: 10px;
 }
 
 .nav-btns a{
