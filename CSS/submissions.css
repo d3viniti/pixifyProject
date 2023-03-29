@@ -1,0 +1,97 @@
+:root{
+    --background-color: #2A3B49;
+    --accent-teal: #7BFFE9;
+    --text-light: #FFFFFF;
+    --text-dark: #000000;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+body{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+/* ----------------- HEADER ----------------------- */
+
+header{
+    height: 100%;
+}
+
+nav {
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 5px;
+    margin: 0;
+}
+
+button {
+    background: none;
+    color: var(--accent-teal);
+}
+
+/* PIXIFY logo */
+
+.logo {
+  padding-left: 20px;
+}
+
+.logo a{                    
+  color: var(--accent-teal);
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 36px;
+}
+
+/* --------------- NAV BTNS ------------ */
+
+.nav-btns {
+  width: 12%;
+display: flex;
+justify-content: space-around;
+align-items: center;
+padding-right: 10px;
+}
+
+.nav-btns a{
+  color: var(--text-light);
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+/* ----------------- HEADER ----------------------- */
+
+main .container {
+    display: flex;
+}
+
+/* -------- SUBMISSION DIV ------- */
+
+main .submissions {
+    display: flex;
+    width: 60%;
+    /* or would it be better to do grid here
+    to have the elements be 2x4? */
+    border: solid lightskyblue 2px;
+}
+
+.sub-div {
+    display: flex;
+    flex-direction: column;
+}
+
+.sub-text {
+    display: flex;
+    justify-content: space-between;
+}

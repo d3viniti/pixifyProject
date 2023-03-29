@@ -49,3 +49,21 @@ const imageSets = [
     }
 
   ];
+
+  const submissionDivs = imageSets.map((submission) => {
+    return `
+    <div class="sub-div">
+      <img src="${submission.images[0]}">
+      <div class="sub-text">
+        <p>${submission.title} - ${submission.name}</p>
+        <a href="">See more</a>
+      </div>
+     </div>`
+  }).join("");
+
+  console.log(submissionDivs);
+
+
+  let container = document.getElementById("submissions");
+
+  container.innerHTML = submissionDivs;
