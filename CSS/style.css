@@ -36,6 +36,7 @@ nav {
     margin: 0;
 }
 
+
 /* PIXIFY logo */
 
 .logo {
@@ -47,6 +48,10 @@ nav {
   font-family: Montserrat;
   font-weight: 400;
   font-size: 36px;
+}
+
+#icon-container {
+  display: none;
 }
 
 /* --------------- NAV BTNS ------------ */

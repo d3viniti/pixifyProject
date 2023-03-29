@@ -53,7 +53,7 @@ const imageSets = [
   const submissionDivs = imageSets.map((submission) => {
     return `
     <div class="sub-div">
-      <img src="${submission.images[0]}">
+      <img src="${submission.images[0]}" alt="${submission.name}" class="meal-image">
       <div class="sub-text">
         <p>${submission.title} - ${submission.name}</p>
         <a href="">See more</a>
@@ -62,8 +62,20 @@ const imageSets = [
   }).join("");
 
   console.log(submissionDivs);
-
-
   let container = document.getElementById("submissions");
-
   container.innerHTML = submissionDivs;
+  
+
+  window.onload = function (){
+    submissionDivs(imageSets);
+  }
+
+  // This portion is for hamburger menu, if I decide to replace my navbtns
+  // with it in the mobile view. At JS events 54:00"
+
+  const menuIcon = document.querySelector("#menu-icon");
+  const openMenu = () => {
+    const btnContainer = document.querySelector
+  }
+
+  menuIcon.onclick = openMenu;
