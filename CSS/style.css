@@ -39,7 +39,7 @@ nav {
 /* PIXIFY logo */
 
 .logo {
-  padding-left: 10px;
+  padding-left: 20px;
 }
 
 .logo a{                    
@@ -52,7 +52,7 @@ nav {
 /* --------------- NAV BTNS ------------ */
 
 .nav-btns {
-  width: 15%;
+  width: 12%;
 display: flex;
 justify-content: space-around;
 align-items: center;
@@ -75,7 +75,6 @@ main {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    border: teal 2px solid;
     height: 100vh;
 }
 
@@ -84,13 +83,32 @@ main p{
   color: var(--text-light);
   font-family: Montserrat;
   font-weight: 400;
-  font-size: 30px;
+  font-size: 1.5vw;
   text-align: center;
-  padding: 15px 15px;
+  display: flex;
+  align-items: center;
+  max-height: 40%;
+  line-height: 36.57px;
+  padding: 44px 55px;
   position: absolute;
-  width: 45%;
-  top: 85vh;
+  width: 33%;
+  height: 40%;
+  bottom: 5vh;
   left: 0;
   border-radius: 150px 150px 150px 0;
+}
 
+main button {
+  position: absolute;
+  bottom: 10vh;
+  right: 5vw;
+  background: none;
+  border: 2px solid var(--accent-teal);
+  color: var(--accent-teal);
+  width: 20vw;
+  padding: 20px 30px;
+  border-radius: 55px;
+  font-size: 36px;
+  font-weight: 400;
+  cursor: pointer;
 }
