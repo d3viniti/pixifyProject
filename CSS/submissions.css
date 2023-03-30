@@ -29,6 +29,7 @@ button{
 
 header{
     height: 100%;
+    width: 100vw;
 }
 
 nav {
@@ -64,9 +65,9 @@ button {
 /* --------------- NAV BTNS ------------ */
 
 .nav-btns {
-  width: 12%;
+  width: 20em;
 display: flex;
-justify-content: space-around;
+justify-content: space-between;
 align-items: center;
 padding-right: 10px;
 }
@@ -78,37 +79,57 @@ padding-right: 10px;
   font-size: 16px;
 }
 
+#drk{
+  border: none;
+}
+
 /* ----------------- HEADER ----------------------- */
 
 main #container {
     display: flex;
+    margin: 10em 0;
 }
 
 /* -------- SUBMISSION DIV ------- */
+
+#subContainer{
+  display: flex;
+  flex-direction: column;
+}
+
+#subContainer h1{
+  text-align: center;
+}
 
 main #submissions {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     align-self: center;
-    width: 70%;
-    /* or would it be better to do grid here
-    to have the elements be 2x4? */
     border: solid lightskyblue 2px;
+    margin-top: 2em;
 }
 
 .sub-div {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .sub-div img{
-  max-width: 15vw;
+  max-width: 20vw;
 }
 
 .sub-text {
     display: flex;
     justify-content: space-between;
+}
+
+.sub-text .see-more {
+  display: flex;
+  font-size: 10px;
+  color: black;
+  align-items: flex-end;
 }
 
 /* ------------ FORM ---------- */
@@ -119,19 +140,25 @@ main #submissions {
   align-items: center;
   width: 30%;
   background-color: var(--background-color);
-  margin: 5em;
-  padding: 1em 0;
+  margin: 0 5em;
+  padding-top: 5em;
   border-radius: 15px;
+
 }
 
 #form h2{
   color: white;
 }
 
+#form #top-input {
+  margin-top: 20px;
+}
+
 #form input {
   margin-top: 1em;
   border-radius: 5px;
   border: none;
+  padding: 5px;
 }
 
 #form button {
@@ -149,8 +176,8 @@ main #submissions {
 
 @media (max-width: 768px){
   #icon-container{
-    display: block;
-  padding: 0 20px;
+   /* set display if want hamburger menu*/
+    padding: 0 20px;
   }
 
   #menu-icon{
@@ -158,9 +185,9 @@ main #submissions {
   cursor: pointer;
   }
 
-  header{
+  /* header{
     display: flex;
-  }
+  } */
 
   #container{
     flex-direction: column-reverse;

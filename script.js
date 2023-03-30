@@ -53,10 +53,10 @@ const imageSets = [
   const submissionDivs = imageSets.map((submission) => {
     return `
     <div class="sub-div">
-      <img src="${submission.images[0]}" alt="${submission.name}" class="meal-image">
+      <img src="${submission.images[0]}" alt="${submission.name}" class="sub-image">
       <div class="sub-text">
         <p>${submission.title} - ${submission.name}</p>
-        <a href="">See more</a>
+        <a href="" class="see-more">See more</a>
       </div>
      </div>`
   }).join("");
