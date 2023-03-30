@@ -75,7 +75,9 @@ const imageSets = [
 
   const menuIcon = document.querySelector("#menu-icon");
   const openMenu = () => {
-    const btnContainer = document.querySelector
+    const btnContainer = document.querySelector(".nav-btns");
+    btnContainer.classList.toggle("mobile-menu");
   }
-
   menuIcon.onclick = openMenu;
+
+  

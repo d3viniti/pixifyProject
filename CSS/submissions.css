@@ -39,6 +39,7 @@ nav {
     justify-content: space-between;
     padding: 5px 5px;
     margin: 0;
+    width: 100vw;
 }
 
 button {
@@ -86,17 +87,13 @@ padding-right: 10px;
 
 /* ----------------- HEADER ----------------------- */
 
-main #container {
-    display: flex;
-    margin: 10em 0;
-}
 
 /* -------- MAIN CONTAINER ----------- */
 
 #container {
   display: flex;
   justify-content: center;
-  margin: 0;
+  margin: 5em 0 0 0;
 }
 /* -------- SUBMISSION DIV ------- */
 
@@ -116,7 +113,6 @@ main #submissions {
     grid-template-rows: auto;
     gap: 30px 40px;
     align-self: center;
-    border: solid lightskyblue 2px;
     margin-top: 2em;
     padding: 0 5em;
 }
@@ -144,7 +140,7 @@ main #submissions {
 
 .sub-text .see-more {
   display: flex;
-  font-size: 0.5em;
+  font-size: 0.75em;
   color: black;
   align-items: flex-end;
 }
@@ -175,7 +171,6 @@ main #submissions {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: solid pink 2px;
 }
 
 #form #top-input {
@@ -206,16 +201,24 @@ main #submissions {
   #icon-container{
    /* set display if want hamburger menu*/
     padding: 0 20px;
+    display: block;
   }
+
+.nav-btns{
+  display: none;
+}
 
   #menu-icon{
     font-size: 30px;
-  cursor: pointer;
+    cursor: pointer;
+    color: white;
   }
 
-  /* header{
+  header{
     display: flex;
-  } */
+    flex-direction: column;
+    align-items: flex-end;
+  }
 
   #container{
     flex-direction: column;
@@ -225,8 +228,11 @@ main #submissions {
     max-width: 40vw;
   }
 
-main #submissions {
-  padding: 0;
+  main #submissions {
+    padding: 0;
+    width: 80vw;
+    align-content: center;
+    justify-content: center;
 }
 
   #form{
@@ -234,10 +240,5 @@ main #submissions {
     align-self: center;
     /* what do I use to center the form in the center of the page?*/
     margin-top: 40px;
-  }
-
-  #submissions{
-    width: 100vw;
-    padding: 0;
   }
 }
