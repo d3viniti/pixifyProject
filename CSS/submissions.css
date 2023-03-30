@@ -30,6 +30,7 @@ button{
 header{
     height: 100%;
     width: 100vw;
+    margin: 0;
 }
 
 nav {
@@ -90,6 +91,13 @@ main #container {
     margin: 10em 0;
 }
 
+/* -------- MAIN CONTAINER ----------- */
+
+#container {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
 /* -------- SUBMISSION DIV ------- */
 
 #subContainer{
@@ -99,15 +107,22 @@ main #container {
 
 #subContainer h1{
   text-align: center;
+  align-self: center;
 }
 
 main #submissions {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
+    gap: 30px 40px;
     align-self: center;
     border: solid lightskyblue 2px;
     margin-top: 2em;
+    padding: 0 5em;
+}
+
+#submissions img{
+  border-radius: 10px;
 }
 
 .sub-div {
@@ -117,17 +132,19 @@ main #submissions {
 }
 
 .sub-div img{
-  max-width: 20vw;
+  max-width: 25vw;
 }
 
 .sub-text {
     display: flex;
     justify-content: space-between;
+    width: 100%;
+    font-size: 1em;
 }
 
 .sub-text .see-more {
   display: flex;
-  font-size: 10px;
+  font-size: 0.5em;
   color: black;
   align-items: flex-end;
 }
@@ -136,18 +153,29 @@ main #submissions {
 
 #form {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  width: 30%;
+  align-self: center;
   background-color: var(--background-color);
   margin: 0 5em;
-  padding-top: 5em;
+  padding: 2.5em;
   border-radius: 15px;
-
 }
 
 #form h2{
   color: white;
+  text-align: center;
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  padding-right: 1em;
+  font-size: 2em;
+}
+
+#form .inputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: solid pink 2px;
 }
 
 #form #top-input {
@@ -190,17 +218,26 @@ main #submissions {
   } */
 
   #container{
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
 
+  .sub-div img{
+    max-width: 40vw;
+  }
+
+main #submissions {
+  padding: 0;
+}
+
   #form{
-    width: 70vw;
+    max-width: 80vw;
     align-self: center;
     /* what do I use to center the form in the center of the page?*/
-  
+    margin-top: 40px;
   }
 
   #submissions{
     width: 100vw;
+    padding: 0;
   }
 }
