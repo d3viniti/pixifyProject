@@ -80,4 +80,27 @@ const imageSets = [
   }
   menuIcon.onclick = openMenu;
 
-  
+  //DARK/LIGHT MODE TOGGLE
+  const themeButton = document.querySelector("#drk");
+  const toggleTheme = () => {
+    const body = document.querySelector("body");
+    const labels = document.querySelectorAll(".sub-text, .see-more");
+    const heading = document.querySelector("h1");
+
+    if(body.style.backgroundColor === "var(--background-color)"){
+      body.style.backgroundColor = "white";
+      themeButton.innerHTML = "DARK MODE";
+      heading.style.color = "black";
+      for(let i = 0; i < labels.length; i++){
+        labels[i].style.color = "black";
+        }
+    } else {
+      body.style.backgroundColor = "var(--background-color)";
+      themeButton.innerHTML = "LIGHT MODE";
+      heading.style.color = "white";
+      for(let i = 0; i < labels.length; i++){
+      labels[i].style.color = "white";
+      }
+    }
+  }
+  themeButton.onclick = toggleTheme;
