@@ -85,25 +85,3 @@ padding-right: 10px;
 }
 
 /* ----------------- HEADER ----------------------- */
-
-/* --------------- MAIN --------------- */
-
-main {
-    display: flex;
-    flex-direction: column;
-    margin: 3vw;
-}
-
-#main-content{
-    display: flex;
-}
-
-#text-button{
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-}
-
-#main-content img{
-    max-width: 30vw;
-}
