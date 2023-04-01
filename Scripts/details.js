@@ -104,3 +104,5 @@ const imageSets = [
   themeButton.onclick = toggleTheme;
 
   //left off at jsevents2
+  // each see more button is taking it to the same details image gallery
+  //how do i fix this?
