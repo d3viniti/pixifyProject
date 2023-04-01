@@ -85,3 +85,39 @@ padding-right: 10px;
 }
 
 /* ----------------- HEADER ----------------------- */
+
+@media (max-width: 768px){
+  #icon-container{
+   /* set display if want hamburger menu*/
+    padding: 0 20px;
+    display: block;
+  }
+
+.nav-btns{
+  display: none;
+}
+
+.mobile-menu{
+  /*it would be cool to add the animation of the 
+  nav buttons sliding down here when menu is clicked*/
+  display: flex;
+  position: relative;
+  top: 3em;
+  padding: 0 1em;
+  background-color: var(--background-color);
+  border-radius: 10px;
+  width: 100%;
+}
+
+  #menu-icon{
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+  }
+
+  header{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}

@@ -50,35 +50,33 @@ const imageSets = [
 
   ];
 
-  const submissionDivs = imageSets.map((submission) => {
-    return `
-    <div class="sub-div">
-      <img src="${submission.images[0]}" alt="${submission.name}" class="sub-image">
-      <div class="sub-text">
-        <p>${submission.title} - ${submission.name}</p>
-        <a href="" class="see-more">See more</a>
-      </div>
-     </div>`
-  }).join("");
+  window.onload = function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    currentId = urlParams.get("id");
 
-  console.log(submissionDivs);
-  let container = document.getElementById("submissions");
-  container.innerHTML = submissionDivs;
-  
+    const currentImage = imageSets.filter((item) => item.id == currentId);
 
-  window.onload = function (){
-    submissionDivs(imageSets);
+
+    //what do I put here to iterate thorugh img?
+    const imageSet = `<div>
+    <h1 class="labels">${imageSets[1].title}</h1>
+    <h2 class="labels">${imageSets[1].name}</h2>
+    <img src="${imageSets[1].images[1]}"> 
+    </div>`
+    
+    const imageContainer = document.querySelector("main");
+    imageContainer.innerHTML = imageSet;
+
   }
 
-  // This portion is for hamburger menu, if I decide to replace my navbtns
-  // with it in the mobile view. At JS events 54:00"
-
+  //HAMBURGER MENU
   const menuIcon = document.querySelector("#menu-icon");
   const openMenu = () => {
     const btnContainer = document.querySelector(".nav-btns");
     btnContainer.classList.toggle("mobile-menu");
   }
   menuIcon.onclick = openMenu;
+
 
   //DARK/LIGHT MODE TOGGLE
   const themeButton = document.querySelector("#drk");
@@ -104,3 +102,5 @@ const imageSets = [
     }
   }
   themeButton.onclick = toggleTheme;
+
+  //left off at jsevents2
