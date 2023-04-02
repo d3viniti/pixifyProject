@@ -59,15 +59,34 @@ const imageSets = [
 
     //what do I put here to iterate thorugh img?
     const imageSet = `<div>
-    <h1 class="labels">${imageSets[1].title}</h1>
-    <h2 class="labels">${imageSets[1].name}</h2>
-    <img src="${imageSets[1].images[1]}"> 
+    <h1 class="labels">${imageSets[0].title}</h1>
+    <h2 class="labels">${imageSets[0].name}</h2>
+    <img src="${imageSets[0].images[0]}"> 
     </div>`
     
-    const imageContainer = document.querySelector("main");
+    const imageContainer = document.querySelector("#dynamicImgContainer");
     imageContainer.innerHTML = imageSet;
 
+
+
+    // ITERATE THRU GALLERY
+    const prevBtn = document.querySelector("#prevBtn");
+    const nextBtn = document.querySelector("#nextBtn");
+
+    const nextImg = (imageSets) => { 
+      for (let i=0; i < imageSets.images.length; i++){
+        const displayImg = document.querySelector("img");
+
+        displayImg.setAttribute("src", `${imageSets.images[i]}`);
+      }
+    }
+
+    nextBtn.addEventListener("click", nextImg);
+
   }
+
+
+
 
   //HAMBURGER MENU
   const menuIcon = document.querySelector("#menu-icon");

@@ -121,3 +121,23 @@ padding-right: 10px;
     align-items: flex-end;
   }
 }
+
+/* ----------- MAIN ---------- */
+
+#dynamicImgContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+img{
+  width: 50vw;
+}
+
+#galBtnContainer{
+  background-color: pink;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
