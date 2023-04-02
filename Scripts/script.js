@@ -56,7 +56,7 @@ const imageSets = [
       <img src="${submission.images[0]}" alt="${submission.name}" class="sub-image">
       <div class="sub-text">
         <p>${submission.title} - ${submission.name}</p>
-        <a href="details.html?=${submission.id}" class="see-more">See more</a>
+        <a href="details.html?id=${submission.id}" class="see-more">See more</a>
       </div>
      </div>`
   }).join("");

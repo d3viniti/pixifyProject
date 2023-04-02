@@ -50,18 +50,23 @@ const imageSets = [
 
   ];
 
+  let currenId;
+  let currentImage;
+
+
   window.onload = function() {
     const urlParams = new URLSearchParams(window.location.search);
     currentId = urlParams.get("id");
 
-    const currentImage = imageSets.filter((item) => item.id == currentId);
+    const currentImage = imageSets.filter((item) => item.id == currentId)[0];
 
+    console.log(currentImage);
 
     //what do I put here to iterate thorugh img?
     const imageSet = `<div>
-    <h1 class="labels">${imageSets[0].title}</h1>
-    <h2 class="labels">${imageSets[0].name}</h2>
-    <img src="${imageSets[0].images[0]}"> 
+    <h1 class="labels">${currentImage.title}</h1>
+    <h2 class="labels">${currentImage.name}</h2>
+    <img src="${currentId.images}" class="img-sequence> 
     </div>`
     
     const imageContainer = document.querySelector("#dynamicImgContainer");
@@ -73,16 +78,31 @@ const imageSets = [
     const prevBtn = document.querySelector("#prevBtn");
     const nextBtn = document.querySelector("#nextBtn");
 
-    const nextImg = (imageSets) => { 
-      for (let i=0; i < imageSets.images.length; i++){
-        const displayImg = document.querySelector("img");
+    let counter = 0;
 
-        displayImg.setAttribute("src", `${imageSets.images[i]}`);
+    const upOne = () =>{
+      if(counter>= currentImage.images.length - 1){
+        counter = counter;
+      } else {
+        counter++;
+        imageSeq.src = currentImage.images[counter];
       }
-    }
+      document.querySelector('current-image-number').innerText = `${counter +1} of ${currentImage.images.length}`;
+    };
 
-    nextBtn.addEventListener("click", nextImg);
+    const downOne = () => {
+      const imageSeq = document.querySelector(`.img-sequence`);
+      if (counter <= 0){
+        counter = counter;
+      } else {
+        counter--;
+        imageSeq.src = currentImage.images[counter];
+      }
+      document.querySelector(`.current-image-number`).innerText = `${counter + 1} of ${currentImage.images.length}`;
+    };
 
+    prevBtn.addEventListener("click", downOne);
+    nextBtn.addEventListener("click", upOne);
   }
 
 
