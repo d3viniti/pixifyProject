@@ -80,6 +80,7 @@ padding-right: 10px;
   font-size: 16px;
 }
 
+
 #drk{
   border: none;
 }
@@ -93,39 +94,26 @@ padding-right: 10px;
     display: block;
   }
 
-.nav-btns{
-  display: none;
-}
+/* DO I NEED TO HAVE THE SAME CODE HERE?*/
+  .nav-btns{
+    display: none;  
+  }
 
-.mobile-menu{
-  /*it would be cool to add the animation of the 
-  nav buttons sliding down here when menu is clicked*/ 
-     display: flex;
+  .mobile-menu{
+    display: flex;
     justify-content: space-between;
     align-items: center;
     position: absolute;
-    top: 0;
+    top: 50px;
     padding: 0 1em;
     background-color: var(--background-color);
     border-radius: 0 0 10px 10px;
     width: 100%;
-    opacity: 0;
-    height: 0;
+    opacity: 1;
+    height: 70px;
     z-index: 0;
     transition: all 1s;
   }
-
-  .nav-btns-mobile a{
-    color: var(--text-light);
-    font-family: Montserrat;
-    font-weight: 400;
-    font-size: 16px;
-  }
-
-/* DO I NEED TO HAVE THE SAME CODE HERE?*/
-.nav-btns{
-  display: none;
-}
 
   .nav-btns-mobile{
     display: flex;
@@ -150,21 +138,6 @@ padding-right: 10px;
     font-size: 16px;
   }
 
-  .mobile-menu{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: absolute;
-    top: 50px;
-    padding: 0 1em;
-    background-color: var(--background-color);
-    border-radius: 0 0 10px 10px;
-    width: 100%;
-    opacity: 1;
-    height: 70px;
-    z-index: 0;
-    transition: all 1s;
-  }
 
   nav{
     background-color: var(--background-color);

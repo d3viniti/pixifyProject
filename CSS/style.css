@@ -24,8 +24,9 @@ body{
 /* ----------------- HEADER ----------------------- */
 
 header{
-    grid-area: "nav";
     height: 100%;
+    width: 100vw;
+    margin: 0;
 }
 
 nav {
@@ -34,8 +35,13 @@ nav {
     justify-content: space-between;
     padding: 5px 5px;
     margin: 0;
+    width: 100vw;
 }
 
+button {
+  background: none;
+  color: var(--accent-teal);
+}
 
 /* PIXIFY logo */
 
@@ -57,9 +63,9 @@ nav {
 /* --------------- NAV BTNS ------------ */
 
 .nav-btns {
-  width: 12%;
+  width: 15em;
 display: flex;
-justify-content: space-around;
+justify-content: space-between;
 align-items: center;
 padding-right: 10px;
 }
@@ -71,7 +77,17 @@ padding-right: 10px;
   font-size: 16px;
 }
 
+.nav-btns-mobile{
+  display: none;
+}
+
+#drk{
+  border: none;
+}
+
 /* ----------------- HEADER ----------------------- */
+
+/* -------- MAIN CONTAINER ----------- */
 
 main {
     grid-area: "main";
@@ -116,4 +132,80 @@ main button {
   font-size: 36px;
   font-weight: 400;
   cursor: pointer;
+}
+
+/* ---------- MOBILE MENU ------------*/
+
+@media (max-width: 768px){
+  #icon-container{
+  /* set display if want hamburger menu*/
+   padding: 0 20px;
+   display: block;
+ }
+
+.nav-btns{
+ display: none;
+}
+
+ .nav-btns-mobile{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   position: absolute;
+   top: 0;
+   padding: 0 1em;
+   background-color: var(--background-color);
+   border-radius: 0 0 10px 10px;
+   width: 100%;
+   opacity: 0;
+   height: 0;
+   z-index: 0;
+   transition: all 1s;
+ }
+
+ .nav-btns-mobile a{
+   color: var(--text-light);
+   font-family: Montserrat;
+   font-weight: 400;
+   font-size: 16px;
+ }
+
+ .mobile-menu{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   position: absolute;
+   top: 100px;
+   padding: 0 1em;
+   background-color: var(--background-color);
+   border-radius: 0 0 10px 10px;
+   width: 100%;
+   opacity: 1;
+   height: 70px;
+   z-index: 0;
+   transition: all 1s;
+ }
+
+ nav{
+   background-color: var(--background-color);
+   display: flex;
+   justify-content: space-between;
+   padding: 5px 5px;
+   margin: 0;
+   width: 100vw;
+   position: relative;
+   z-index: 1;
+ }
+
+ #menu-icon{
+   font-size: 30px;
+   cursor: pointer;
+   color: white;
+ }
+
+ header{
+   display: flex;
+   flex-direction: column;
+   align-items: flex-end;
+ }
 }
